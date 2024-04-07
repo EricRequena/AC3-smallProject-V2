@@ -9,12 +9,7 @@ using CsvHelper;
 
 namespace ConsoleApp1
 {
-    [XmlRoot("Comarques")]
-    public class ComarquesXml
-    {
-        [XmlElement("Comarca")]
-        public List<ComarcaXml> Comarques { get; set; }
-    }
+    
 
     class Program
     {
@@ -22,7 +17,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            string rutaRelativa = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dades.csv");
+            string rutaRelativa = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\dades.csv");
             LlegirDadesCSV(rutaRelativa);
 
             const string menuOptionPrompt = "Escull una opció (1-5):";
